@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-     TaskA5Board.board(4);
+     Task14Password pass = new Task14Password();
+        pass.passcheck();
     }
 }
