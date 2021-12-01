@@ -13,35 +13,45 @@ public class Task14Password {
     Если условия выполняются, написать «Security password verified success» и завершить программу.
   */
 
-    public void passcheck() {
+    public static void setPass() {
+        Task14Password pass = new Task14Password();
+        Scanner scanner = new Scanner(System.in);
+        String password;
+        do {
+
+            System.out.println("enter pass:");
+            password = scanner.nextLine();
+            if (pass.passCheck(password) == false) {
+                System.out.println("Incorrect");
+            } else {
+                System.out.println("«Security password verified success»");
+                System.out.println("New password: " + password);
+                break;
+            }
+        }
+        while (true);
+    }
+
+    public boolean passCheck(String password) {
         String[] pass = new String[3];
         pass[0] = "123456";
         pass[1] = "000000";
-        pass[2] = "0";
-        Scanner scanner = new Scanner(System.in);
-        String tempPass = "";
+        //pass[2] = "654321";
 
-        while (true) {
-        System.out.println("Enter password");
-        tempPass = scanner.nextLine();
+        boolean answer = false;
         for (int i = 0; i < pass.length; i++) {
-
-                if (!pass[i].equals(tempPass)) {
-
-                    System.out.println(tempPass + " " + i );
-                    System.out.println("«Security password verified success»");
-                    break;
-                } else {
-
+            if (password.length() > 3) {
+                if (password.equals(pass[i])) {
                     System.out.println("Password exists");
-                    tempPass = scanner.nextLine();
+                    return false;
+                } else {
+                    answer = true;
+
 
                 }
-
-            } break;
-
-
+            } else {System.out.println("Password too short");
+            }
         }
-
+        return answer;
     }
 }
