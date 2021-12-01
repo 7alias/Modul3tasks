@@ -34,13 +34,13 @@ public class Task14Password {
 
     public boolean passCheck(String password) {
         String[] pass = new String[3];
-        pass[0] = "123456";
-        pass[1] = "000000";
-        //pass[2] = "654321";
+        pass[0] = "123456789";
+        pass[1] = "000000000";
+        pass[2] = "654321654";
 
         boolean answer = false;
         for (int i = 0; i < pass.length; i++) {
-            if (password.length() > 3) {
+            if (password.length() > 8) {
                 if (password.equals(pass[i])) {
                     System.out.println("Password exists");
                     return false;
