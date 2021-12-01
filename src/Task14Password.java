@@ -44,17 +44,16 @@ public class Task14Password {
 
         for (int i = 0; i < pass.length; i++) {
             if (password.length() < 8) {
-                return false;}
-                else if (password.equals(pass[i])) {
+                return false;
+            } else if (password.equals(pass[i])) {
 
-                    return false;
-                }
-else {}
-
-            }  return true;
-
+                return false;
+            } else {
+            }
 
         }
 
 
+        return true;
     }
+}
