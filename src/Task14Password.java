@@ -43,17 +43,10 @@ public class Task14Password {
         pass[2] = "654321654";
 
         for (int i = 0; i < pass.length; i++) {
-            if (password.length() < 8) {
+            if (password.equals(pass[i]) || password.length() < 8) {
                 return false;
-            } else if (password.equals(pass[i])) {
-
-                return false;
-            } else {
             }
-
         }
-
-
         return true;
     }
 }
