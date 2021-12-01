@@ -17,19 +17,23 @@ public class Task14Password {
         Task14Password pass = new Task14Password();
         Scanner scanner = new Scanner(System.in);
         String password;
+        boolean isCorrect = true;
         do {
 
             System.out.println("enter pass:");
             password = scanner.nextLine();
             if (pass.passCheck(password) == false) {
                 System.out.println("Incorrect");
+                continue;
             } else {
                 System.out.println("«Security password verified success»");
                 System.out.println("New password: " + password);
                 break;
             }
         }
-        while (true);
+        while (isCorrect);
+
+
     }
 
     public boolean passCheck(String password) {
@@ -38,20 +42,19 @@ public class Task14Password {
         pass[1] = "000000000";
         pass[2] = "654321654";
 
-        boolean answer = false;
         for (int i = 0; i < pass.length; i++) {
-            if (password.length() > 8) {
-                if (password.equals(pass[i])) {
-                    System.out.println("Password exists");
+            if (password.length() < 8) {
+                return false;}
+                else if (password.equals(pass[i])) {
+
                     return false;
-                } else {
-                    answer = true;
-
-
                 }
-            } else {System.out.println("Password too short");
-            }
+else {}
+
+            }  return true;
+
+
         }
-        return answer;
+
+
     }
-}
