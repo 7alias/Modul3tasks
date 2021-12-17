@@ -28,7 +28,7 @@ public class Crypto {
         }
 
     public static void run(){ Crypto c = new Crypto();
-    String text = "Lorem ipsum";
+
         System.out.println(c.encrypt(text, 5));
         System.out.println(c.decrypt(c.encrypt(text, 5), 5));}
     }

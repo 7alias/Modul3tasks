@@ -7,7 +7,8 @@ public class Main {
 
 //     TaskA3PascalTriangle.pascal();
 //TaskA4Output.out();
-//TaskA5Board.board(4);
-        TaskA6.run();
+TaskA5Board.board(26);
+//        TaskA6.run();
+        //Crypto.run();
     }}
 
