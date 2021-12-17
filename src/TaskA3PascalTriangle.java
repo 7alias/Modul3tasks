@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class TaskA3PascalTriangle {
-    public static short size = 3;
+    public static int size = 5;
     public static int[][] ints = new int[size][];
 
     public static void pascal() {
